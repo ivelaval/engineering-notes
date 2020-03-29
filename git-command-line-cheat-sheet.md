@@ -18,7 +18,7 @@
 git --version
 ```
 
-[![Official dicumentation](https://img.icons8.com/material/24/000000/link--v1.png)**Config**](https://git-scm.com/docs/git-config)
+[**Config**](https://git-scm.com/docs/git-config)
 
 ```bash
 git config --list
@@ -32,7 +32,7 @@ git config --global user.name "Ivan Avila"
 git config --global user.email "ivelaval@gmail.com"
 ```
 
-[![Official dicumentation](https://img.icons8.com/material/24/000000/link--v1.png)**Help**](https://git-scm.com/docs/git-help)
+[**Help**](https://git-scm.com/docs/git-help)
 
 ```bash
 git help <verb>
@@ -42,7 +42,7 @@ git help <verb>
 git <verb> --help 
 ```
 
-[![Official dicumentation](https://img.icons8.com/material/24/000000/link--v1.png)**Init**](https://git-scm.com/docs/git-help)
+[**Init**](https://git-scm.com/docs/git-help)
 
 ```bash
 git init
@@ -54,13 +54,13 @@ git init
 
 
 
-**Status**
+[**Status**](https://git-scm.com/docs/git-status)
 
 ```bash
 git status
 ```
 
-**Add**
+[**Add**](https://git-scm.com/docs/git-add)
 
 ```bash
 git add .
@@ -76,7 +76,7 @@ git add -A
 
 > Force to add everything changes
 
-**Commit**
+[**Commit**](https://git-scm.com/docs/git-commit)
 
 ```bash
 git commit -m "<message>"
@@ -88,13 +88,13 @@ git commit -a -m "<message>"
 
 > Commit the staged snapshot recursively
 
-**Log**
+[**Log**](https://git-scm.com/docs/git-log)
 
 ```bash
 git log
 ```
 
-**Diff**
+[**Diff**](https://git-scm.com/docs/git-diff)
 
 ```bash
 git diff
@@ -108,7 +108,7 @@ git diff
 
 
 
-**Branch**
+[**Branch**](https://git-scm.com/docs/git-branch)
 
 ```bash
 git branch -a
@@ -128,7 +128,7 @@ git branch -d <branch-name>
 
 > Delete <branch-name>
 
-**Checkout**
+[**Checkout**](https://git-scm.com/docs/git-checkout)
 
 ```bash
 git checkout -b <branch-name>
@@ -150,13 +150,57 @@ git switch <branch-name>
 
 > Switch to a specified branch
 
+[**Stash**](https://git-scm.com/docs/git-stash)
+
+```bash
+git stash list
+```
+
+```bash
+git stash apply
+git stash apply <stash@{<number>}>
+```
+
+> Apply stash ID on 0 position ***stash@{0}*** if It's not has specified the position
+
+```bash
+git stash save "<name>"
+```
+
+```bash
+git stash drop 
+git stash drop <stash@{<number>}>
+```
+
+> Delete stash ID on 0 positon ***stash@{0}*** if It's not has specified the position
+
+```bash
+git stash show
+git stash show <stash@{<number>}> 
+```
+
+> Show changes of stash ID on 0 positon ***stash@{0}*** if It's not has specified the position
+
+```bash
+git stash pop 
+git stash pop <stash@{<number>}>
+```
+
+> Apply last stash and delete it if It's not has specified the position
+
+```bash
+git stash branch <branch-name> <stash@{<number>}>
+```
+
+> Create a new branch from stash ID
 
 
-## Undoung changes
+
+## Undoing changes
 
 
 
-**Reset**
+[**Reset**](https://git-scm.com/docs/git-reset)
 
 ```bash
 git reset <file>
@@ -168,15 +212,16 @@ git reset
 
 > Remove all files from staging area
 
-**Revert**
+[**Revert**](https://git-scm.com/docs/git-revert)
 
 ```bash
+git revert
 git revert <commit>
 ```
 
 > Create a new commit that undoes all of the changes  made in <commit>
 
-**Clean**	
+[**Clean**](https://git-scm.com/docs/git-clean)	
 
 ```bash
 git clean <flag>
@@ -186,12 +231,74 @@ git clean <flag>
 
 
 
+## Sharing and Updating Projects
 
 
 
+[**Remote**](https://git-scm.com/docs/git-remote)
+
+```bash
+git remote -v
+```
+
+```bash
+git remote add <name> <destination-url> 
+```
+
+```bash
+git remote rename <new-name> <destination-url>
+```
+
+```bash
+git remote show <name>	
+```
+
+```bash
+git remote set-url <name> <new-destination-url>
+```
+
+[**Fetch**](https://git-scm.com/docs/git-fetch)
+
+```bash
+git fetch <remote> <branch>
+```
+
+> get last changes info
+
+[**Pull**](https://git-scm.com/docs/git-pull)
+
+```bash
+git pull <remote> <branch>
+git pull <remote/branch>
+```
+
+```bash
+git pull --rebase <origin> <branch>
+```
+
+[**Push**](https://git-scm.com/docs/git-push)
+
+```bash
+git push <remote> <branch>
+git push <remote/branch>
+```
+
+```bash
+git push -u <remote> <branch>
+```
+
+> Push to <remote> any exist branch
+
+```bash
+git push <remote> --delete <branch>
+```
+
+> Delete remote branch
 
 
 
 ## Git Flow
+
+
 
 ![Git-flow](https://i.stack.imgur.com/TBHkD.png)
