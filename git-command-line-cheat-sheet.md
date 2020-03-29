@@ -132,9 +132,10 @@ git branch -d <branch-name>
 
 ```bash
 git checkout -b <branch-name>
+git checkout -b <branch-name> <from-branch-name>
 ```
 
-> Create and check out a new <branch-name>
+> Create and check out a new <branch-name> from another branch,
 
 ```bash
 git checkout -- <file-name>	
@@ -194,6 +195,13 @@ git stash branch <branch-name> <stash@{<number>}>
 
 > Create a new branch from stash ID
 
+[**Merge**](https://git-scm.com/docs/git-merge)
+
+```bash
+git merge <branch-name>
+```
+
+> Merge <branch-name> on top of the current branch
 
 
 ## Undoing changes
