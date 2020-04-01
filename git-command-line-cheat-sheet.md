@@ -130,9 +130,17 @@ $ git branch <branch-name>
 
 ```bash
 $ git branch -d <branch-name>
+$ git branch ---delete <branch-name>
 ```
 
 > Delete <branch-name>
+
+```bash
+$ git branch -D <branch-name>
+$ git bramch --delete --force <branch-name>
+```
+
+> Delete the branch regardless of current push and merge status, so be careful using this one
 
 [**Checkout**](https://git-scm.com/docs/git-checkout)
 
@@ -274,7 +282,7 @@ $ git remote set-url <name> <new-destination-url>
 [**Fetch**](https://git-scm.com/docs/git-fetch)
 
 ```bash
-$ git fetch <remote> <branch>
+$ git fetch <remote-name> <branch>
 ```
 
 > get last changes info
@@ -282,12 +290,12 @@ $ git fetch <remote> <branch>
 [**Pull**](https://git-scm.com/docs/git-pull)
 
 ```bash
-$ git pull <remote> <branch>
-$ git pull <remote/branch>
+$ git pull <remote-name> <branch-name>
+$ git pull <remote-name/branch-name>
 ```
 
 ```bash
-$ git pull --rebase <origin> <branch>
+$ git pull --rebase <origin> <branch-name>
 ```
 
 ```bash
@@ -297,18 +305,19 @@ $ git rebase –continue
 [**Push**](https://git-scm.com/docs/git-push)
 
 ```bash
-$ git push <remote> <branch>
-$ git push <remote/branch>
+$ git push <remote-name> <branch-name>
+$ git push <remote-name/branch-name>
 ```
 
 ```bash
-$ git push -u <remote> <branch>
+$ git push -u <remote-name> <branch-name>
 ```
 
 > Push to <remote> any exist branch
 
 ```bash
-$ git push <remote> --delete <branch>
+$ git push <remote-name> --delete <branch-name>
+$ git push <remote-name> :<branch-name>
 ```
 
 > Delete remote branch
